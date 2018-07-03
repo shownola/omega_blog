@@ -34,6 +34,12 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+  
+  def destroy
+    @article.destroy
+    flash[:danger] = 'Your article has been deleted'
+    redirect_to articles_path
+  end
 
   
   
