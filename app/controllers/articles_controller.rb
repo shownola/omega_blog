@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
   
   def index
     @articles = Article.all
@@ -22,10 +23,27 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
+  def edit
+  end
+  
+  def update
+    if @article.update(article_params)
+      flash[:success] = 'Article has been updated'
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+
+  
   
   private
   
     def article_params
       params.require(:article).permit(:title, :description)
+    end
+    
+    def find_article
+      @article = Article.find(params[:id])
     end
 end
