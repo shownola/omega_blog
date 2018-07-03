@@ -1,0 +1,56 @@
+@import "bootstrap";
+
+
+$rose: #E2A8B2;
+$red: #C5545A;
+$rose-brown: #C4A094;
+
+body,html {
+  height: 100%;
+}
+
+.bg-rose {
+  background-color: $rose;
+}
+
+#logo {
+  color: $red;
+  // text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 400;
+  font-size: 2em;
+  // font-size: 25px;
+  font-family: 'Great Vibes', cursive!important;
+  // text-shadow: 1px 1px 2px #000000;
+}
+.home-bg {
+  background-image: asset-url('blog.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-family: 'Great Vibes', cursive!important;
+  color: $red;
+}
+.btn {
+  background: $rose;
+}
+.btn:hover {
+  background: $rose-brown;
+}
+.home-links {
+  color: $rose-brown;
+  a:hover {
+    color: $red;
+  }
+}
+
+.footer-container {
+  background: $rose-brown !important;
+  background-size: cover;
+}
+
+// .info {
+//   margin-top: 250px;
+// }
