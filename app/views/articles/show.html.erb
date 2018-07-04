@@ -1,12 +1,28 @@
-<div class="container new-container">
-  <p><h1>Title:</h1><%= @article.title %></p>
+<div class="new-container h-100 show-bg">
+  
+  <section class="container">
+    <p><h1 class="display-3">Title:</h1><%= @article.title %></p>
 
-  <p><h1>Description:</h1> <%= @article.description %></p>
+    <p><h1 class="display-3">Description:</h1> <%= @article.description %></p>
+  </section>
+  
+  
+  <p class="text-center home-links col">
+    <%= link_to 'Edit Article', edit_article_path(@article), class: 'a-link' %> |
+    <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure you want to delete this article?' }, class: 'a-link' %> |
+    <%= link_to 'Back to articles', articles_path, class: 'a-link' %>
+  </p>
 </div>
 
 
 
 
-<%= link_to 'Edit Article', edit_article_path(@article) %> |
-<%= link_to 'Back to articles', articles_path %>
 
+
+<!--<div class="d-flex align-items-center flex-column justify-content-center h-100 home-bg">-->
+<!--  <section class="info justify-content-center align-items-center">-->
+<!--     <h1 class="cover-heading text-center display-1">Omega Blog</h1>-->
+<!--      <p class="lead"> Download, edit the text, and add your own fullscreen background photo to make it your own.</p>-->
+<!--      <p class="lead text-center">-->
+<!--        <%= link_to 'Sign Up', root_path, class: 'btn btn-lg btn-secondary' %>-->
+ 
