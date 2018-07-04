@@ -1,6 +1,10 @@
-<p><h1>Title:</h1><%= @article.title %></p>
+<div class="container new-container">
+  <p><h1>Title:</h1><%= @article.title %></p>
 
-<p><h2>Description:</h2> <%= @article.description %></p>
+  <p><h1>Description:</h1> <%= @article.description %></p>
+</div>
+
+
 
 
 <%= link_to 'Edit Article', edit_article_path(@article) %> |
