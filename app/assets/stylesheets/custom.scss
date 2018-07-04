@@ -8,6 +8,10 @@ $rose-brown: #C4A094;
 body,html {
   height: 100%;
 }
+body {
+  background-color: #EFEBE2;
+  padding-top: 65px;
+}
 
 .bg-rose {
   background-color: $rose;
@@ -51,6 +55,26 @@ h1 {
   background-size: cover;
 }
 
+.index-container {
+  margin-top: 40px;
+}
+
+td a {
+  color: $red;
+}
+
+.a-link {
+  color: $rose-brown;
+  padding-bottom: 10px;
+  
+}
+
+.new-container {
+  margin-top: 40px;
+}
+.btn-lg {
+  background: $rose;
+}
 // .info {
 //   margin-top: 250px;
 // }

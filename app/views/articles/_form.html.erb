@@ -9,18 +9,39 @@
   </ul>
 <% end %>
 
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@article, :html => { class: 'form-horizontal', role: 'form' } ) do |f| %>
+    <div class="form-group">
+      <div class="control-label col-md-2">
+        <%= f.label :title %>
+      </div>
+      <div class="col-md-10">
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+    </div>
+    
+     <div class="form-group">
+      <div class="control-label col-md-2">
+        <%= f.label :description %>
+      </div>
+      <div class="col-md-10">
+        <%= f.text_area :description, rows: 10, class: 'form-control' %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-4">
+        <%= f.submit class: 'btn btn-lg' %>
+      </div>
+    </div>
+    <% end %>
+    
+    <div class="text-center home-links col">
+      [ <%= link_to 'Cancel request and return to articles', articles_path, class: 'a-link' %> ]
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back to articles', articles_path %>
+
+
