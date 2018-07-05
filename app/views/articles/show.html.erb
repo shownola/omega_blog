@@ -2,6 +2,7 @@
   
   <section class="container">
     <p><h1 class="display-3">Title:</h1><%= @article.title %></p>
+    <p><h4 class="display-5">Created by: <%= @article.user.username %><%= time_ago_in_words(@article.created_at) %> ago</h4></p>
 
     <p><h1 class="display-3">Description:</h1> <%= @article.description %></p>
   </section>
