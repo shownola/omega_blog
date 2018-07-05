@@ -40,7 +40,7 @@ body {
   background-repeat: repeat;
   // opacity: 0.3;
 }
-h1, h4 {
+h1, h2, h4 {
   font-family: 'Great Vibes', cursive!important;
   color: $red;
 }
@@ -87,4 +87,22 @@ td a {
 // }
 .card-danger {
   background: $rose;
+}
+
+::placeholder {
+  color: $rose;
+}
+.form-control::-moz-placeholder {
+  color: $rose;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: $rose;
+}
+.form-control::-webkit-input-placeholder {
+  color: $rose;
+}
+/* My styles */
+.form-control::placeholder {
+  font-weight: 500;
 }
