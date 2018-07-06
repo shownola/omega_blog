@@ -1,40 +1,43 @@
-
- <table class="table table-striped">
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Created By</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  
-  
+<div class="row">
+  <div class="col-md-12" align="center">
     <% obj.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= truncate(article.description, length: 75) %></td>
-        <td><%= article.user.username if article.user %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure you want to delete this article?' } %></td>
-      </tr>
+    <h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
+    <h6><%= truncate(article.description, length: 50) %></h6>
+    
     <% end %>
+    
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ <!--<table class="table table-striped">-->
+ <!--   <tr>-->
+ <!--     <th>Title</th>-->
+ <!--     <th>Description</th>-->
+ <!--     <th>Created By</th>-->
+ <!--     <th></th>-->
+ <!--     <th></th>-->
+ <!--     <th></th>-->
+ <!--   </tr>-->
   
-  </table>
+  
+ <!--   <% obj.each do |article| %>-->
+ <!--     <tr>-->
+ <!--       <td><%= article.title %></td>-->
+ <!--       <td><%= truncate(article.description, length: 75) %></td>-->
+ <!--       <td><%= article.user.username if article.user %></td>-->
+ <!--       <td><%= link_to 'Edit', edit_article_path(article) %></td>-->
+ <!--       <td><%= link_to 'Show', article_path(article) %></td>-->
+ <!--       <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure you want to delete this article?' } %></td>-->
+ <!--     </tr>-->
+ <!--   <% end %>-->
+  
+ <!-- </table>-->
 
 
 
 
 
 
-<!--<% obj.each do |article| %>-->
-<!--  <tr>-->
-<!--    <td><%= article.title %></td>-->
-<!--    <td><%= truncate(article.description, length: 75) %></td>-->
-<!--    <td><%= article.user.username if article.user %></td>-->
-<!--    <td><%= link_to 'Edit', edit_article_path(article) %></td>-->
-<!--    <td><%= link_to 'Show', article_path(article) %></td>-->
-<!--    <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure you want to delete this article?' } %></td>-->
-<!--  </tr>-->
-<!--<% end %>-->

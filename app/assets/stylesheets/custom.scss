@@ -40,7 +40,7 @@ body {
   background-repeat: repeat;
   // opacity: 0.3;
 }
-h1, h2, h4 {
+h1, h2, h3, h4 {
   font-family: 'Great Vibes', cursive!important;
   color: $red;
 }
@@ -73,11 +73,20 @@ td a {
 .a-link {
   color: $rose-brown;
   padding-bottom: 10px;
-  
 }
+
+.article-link {
+  color: $red;
+}
+.article-link:hover {
+    color: $rose !important;
+  }
 
 .new-container {
   margin-top: 40px;
+}
+.new-container1 {
+  margin-top: 4px;
 }
 .btn-lg {
   background: $rose;
@@ -106,3 +115,22 @@ td a {
 .form-control::placeholder {
   font-weight: 500;
 }
+
+.listing {
+  list-style: none;
+}
+.card {
+  background-color: #F1EFED !important;
+  color: $rose;
+  a {
+    color: $red;
+  }
+}
+.rounded-circle {
+  img: 120px;
+}
+
+
+// #EAD3D7
+
+// #FFECEC

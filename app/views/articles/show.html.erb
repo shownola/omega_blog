@@ -1,12 +1,18 @@
-<div class="new-container h-100 show-bg">
+<div class="new-container1 h-100 show-bg">
+  <% if @article.user %>
+ <div align="center" class="gravatar-size">
+   <%= link_to gravatar_for(@article.user), user_path(@article.user), size: 150 if @article.user %>
+ </div>
+  
+  <p><h4 class="display-5" align="center">Created by: <%= @article.user.username %> <%= time_ago_in_words(@article.created_at) %> ago</h4></p>
   
   <section class="container">
     <p><h1 class="display-3">Title:</h1><%= @article.title %></p>
-    <p><h4 class="display-5">Created by: <%= @article.user.username %><%= time_ago_in_words(@article.created_at) %> ago</h4></p>
+    
 
     <p><h1 class="display-3">Description:</h1> <%= @article.description %></p>
   </section>
-  
+  <% end %>
   
   <p class="text-center home-links col">
     <%= link_to 'Edit Article', edit_article_path(@article), class: 'a-link' %> |
@@ -20,10 +26,4 @@
 
 
 
-<!--<div class="d-flex align-items-center flex-column justify-content-center h-100 home-bg">-->
-<!--  <section class="info justify-content-center align-items-center">-->
-<!--     <h1 class="cover-heading text-center display-1">Omega Blog</h1>-->
-<!--      <p class="lead"> Download, edit the text, and add your own fullscreen background photo to make it your own.</p>-->
-<!--      <p class="lead text-center">-->
-<!--        <%= link_to 'Sign Up', root_path, class: 'btn btn-lg btn-secondary' %>-->
  
