@@ -11,6 +11,7 @@ body,html {
 body {
   background-color: #EFEBE2;
   padding-top: 65px;
+  color:  #3E3E3E;
 }
 
 .bg-rose {
@@ -68,6 +69,12 @@ h1, h2, h3, h4 {
 
 td a {
   color: $red;
+  a:hover {
+    color: $rose-brown;
+  }
+}
+td a:hover {
+  color: $rose-brown;
 }
 
 .a-link {
@@ -133,7 +140,9 @@ td a {
   color: $red;
 }
 
-
+.form-inline {
+  
+}
 
 // #EAD3D7
 
