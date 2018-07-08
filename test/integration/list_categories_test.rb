@@ -4,11 +4,12 @@ class ListCategoriesTest < ActionDispatch::IntegrationTest
   
   
   def setup
+    # @user = User.create(username: 'John@email.com', password: 'password')
     @category = Category.create(name: 'Sports')
     @category2 = Category.create(name: 'Programming')
   end
   
-  test 'should show categories lsiting' do
+  test 'should show categories listing' do
     get categories_path
     assert_template 'categories/index'
     assert_select "a[href=?]", category_path(@category), text: @category.name
