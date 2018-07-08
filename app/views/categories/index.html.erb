@@ -1,0 +1,30 @@
+<div class="container new-container">
+  <h1 class="display-3" align="center">All Categories</h1>
+  <div class="container">
+  <div class="listing">
+    <div class="row">
+      <div class="col-md-4 article-title">
+      <div class="card-deck">
+          <div class="card">
+            <% @categories.each do |category| %>
+          
+          <div class="card-header">
+            <%= link_to "#{category.name}", category_path(category) %>
+            <!--<%= category.name %>-->
+          </div>
+          <div class="card-body">
+            
+          </div>
+          <div class="card-footer">
+            
+          </div>
+          <% end %>
+          <%= will_paginate %>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+   </div> 
+ </div> 
+</div>
