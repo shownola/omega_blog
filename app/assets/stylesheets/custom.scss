@@ -92,6 +92,10 @@ td a:hover {
 .article-link:hover {
     color: $rose !important;
   }
+  .article-title {
+    font-size: 1.3em;
+    margin-top: 8px;
+  }
 
 .new-container {
   margin-top: 40px;
@@ -150,6 +154,18 @@ td a:hover {
 
 .icon {
   font-size: 18px;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
+.badge a {
+  color: $red;
+}
+button {
+  background: $rose;
+  border-radius: 50%;
+  border: 2px solid $rose-brown;
 }
 
 // #EAD3D7

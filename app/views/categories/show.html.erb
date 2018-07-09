@@ -1,6 +1,13 @@
 <div class="container new-container">
   <div align="center">
     <h1 class="display-3"><%= "#{@category.name}" %></h1>
+    
+    
+    <%= render 'articles/article', obj: @category_articles %>
+    
+    
+    <%= will_paginate @category_articles %>
+   
   </div>
 </div>
 

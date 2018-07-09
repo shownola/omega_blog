@@ -11,8 +11,14 @@
     
 
     <p><h1 class="display-3">Description:</h1> <%= @article.description %></p>
+    
+    <% if @article.categories.any? %>
+      <p><h3>Categories: </h3><%= render @article.categories %></p>
+    <% end %>
   </section>
   <% end %>
+  
+    
   
   <p class="text-center home-links col">
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
